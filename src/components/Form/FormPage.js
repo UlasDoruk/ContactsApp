@@ -2,6 +2,7 @@ import {useState} from "react"
 import { nanoid } from "@reduxjs/toolkit"
 import { useDispatch } from "react-redux"
 import { addContact } from "../../redux/contactsSlice"
+import List from "../List"
 
 function Contacts() {
 
@@ -26,6 +27,7 @@ function Contacts() {
           onChange={(e) => setName(e.target.value)}
         ></input>
       </form>
+      <List/>
     </div>
   );
 }

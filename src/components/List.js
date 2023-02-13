@@ -16,12 +16,15 @@ function List() {
     <div>
       {contacts.map((item) => {
         return (
-          <div key={item.id}>
+          <div
+            className="border-double border-4 border-sky-500 w-2/4 grid content-center basis-0 "
+            key={item.id}
+          >
             <h1>{item.name}</h1>
             <h2>{item.phone}</h2>
             <button onClick={() => handleDelete(item.id)}>X</button>
             <Link to={`/update/${item.id}`}>
-              <button >Update</button>
+              <button>Update</button>
             </Link>
           </div>
         );

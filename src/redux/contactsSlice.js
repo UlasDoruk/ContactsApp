@@ -4,7 +4,6 @@ export const contactAdaptor = createEntityAdapter();
 export const contactSelector = contactAdaptor.getSelectors((state) => state.contacts);
 const initialState = contactAdaptor.getInitialState();
 
-
 const contactsSlice = createSlice({
     name : "contacts",
     initialState,
@@ -12,8 +11,9 @@ const contactsSlice = createSlice({
         addContact : contactAdaptor.addOne,
         deleteContact : contactAdaptor.removeOne,
         removeAllContacts : contactAdaptor.removeAll,
+        updateContacts : contactAdaptor.updateOne
     }
 })
 
-export const { addContact, deleteContact, removeAllContacts } = contactsSlice.actions;
+export const { addContact, deleteContact, removeAllContacts, updateContacts } =contactsSlice.actions;
 export default contactsSlice.reducer

@@ -13,32 +13,27 @@ function List() {
     }
 
   return (
-    <div className="grid justify-items-center ">
+    <div className="grid justify-items-center">
       {contacts.map((item) => {
         return (
           <div
-            className=" border-slate-800 rounded-lg border-4 border-solid w-2/4 grid content-center basis-0 m-2"
+            className=" border-slate-800 rounded-lg border-4 border-solid  grid m-2 justify-items-center"
             key={item.id}
           >
-            <h1 className="bg-stone-200 text-gray-900 font-bold m-2 w-1/4 rounded-md">
+            <h1 className="bg-stone-200 text-gray-900 font-bold m-2 p-4 rounded-md">
               {item.name}
             </h1>
-            <h2 className="bg-stone-200 text-gray-900 font-bold m-2 w-1/4 rounded-md">
+            <h2 className="bg-stone-200 text-gray-900 font-bold m-2 p-4 rounded-md">
               {item.phone}
-            </h2>
-
-            <div>
-              {" "}
-              <button
-                className="bg-gray-800 text-cyan-200 rounded-md font-bold m-2 text-center w-1/4"
-                onClick={() => handleDelete(item.id)}
-              >
-                X
-              </button>
-            </div>
-
+            </h2>{" "}
+            <button
+              className="bg-gray-800 text-cyan-200 rounded-md font-bold m-2 p-4 text-center"
+              onClick={() => handleDelete(item.id)}
+            >
+              X
+            </button>
             <Link to={`/update/${item.id}`}>
-              <button className="bg-gray-800 text-cyan-200  font-bold rounded-md p-2 m-2 w-1/4">
+              <button className="bg-gray-800 text-cyan-200 text-center  font-bold rounded-md p-2 m-2">
                 Update
               </button>
             </Link>

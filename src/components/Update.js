@@ -27,10 +27,13 @@ function Update() {
     };
 
   return (
-    <div>
-      <h1>Edit Form </h1>
+    <div className="grid justify-items-center">
+      <h1 className="bg-slate-700 rounded-md p-2 m-2 text-cyan-400">
+        Edit Form{" "}
+      </h1>
       <form onSubmit={handleSumbit}>
         <input
+          className="m-2 p-2 rounded-md"
           placeholder="Name"
           value={name}
           type={"text"}
@@ -38,15 +41,23 @@ function Update() {
         ></input>
         <div>
           <input
+            className="m-2 p-2 rounded-md"
             placeholder="Phone"
             value={phone}
             type={"tel"}
             onChange={(e) => setPhone(e.target.value)}
           ></input>
         </div>
-        <button type="submit">Update</button>
+        <button
+          type="submit"
+          className="rounded-md p-2 m-2 bg-slate-700 text-cyan-300"
+        >
+          Update
+        </button>
         <Link to={"/"}>
-          <button>Back</button>
+          <button className="rounded-md p-2 m-2 bg-slate-700 text-cyan-300">
+            Back
+          </button>
         </Link>
       </form>
     </div>

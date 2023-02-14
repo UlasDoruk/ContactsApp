@@ -24,14 +24,23 @@ function Contacts() {
   }
       
   return (
-    <div>
-      <h1 className="bg-blue-400 m-20 text-lg rounded-md text-gray-900 font-bold">
+    <div className="grid justify-center">
+      <h1 className="bg-sky-200 m-5 grid text-lg rounded-md text-gray-900 font-bold p-2 justify-items-center">
         Contacts {total === 0 ? "" : total}{" "}
       </h1>
-      {total > 1 ? <button className="bg-stone-300 rounded-md p-1 m-2" onClick={handleRemoveAll}>Remove All</button> : ""}
+      {total > 1 ? (
+        <button
+          className="bg-stone-300 rounded-md p-1 m-2"
+          onClick={handleRemoveAll}
+        >
+          Remove All
+        </button>
+      ) : (
+        ""
+      )}
       <form onSubmit={handleSubmit}>
         <input
-          className="bg-sky-100 m-5 rounded p-1"
+          className="bg-sky-100 m-2 rounded p-1"
           placeholder="Name"
           type={"text"}
           value={name}
@@ -39,7 +48,7 @@ function Contacts() {
         ></input>
         <div>
           <input
-            className="bg-sky-100 m-5 rounded p-1"
+            className="bg-sky-100 m-2 rounded p-1"
             placeholder="Phone"
             type={"tel"}
             value={phone}

@@ -5,7 +5,7 @@ import {Route,Routes} from "react-router-dom"
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-slate-900">
       <Routes>
         <Route path="/" element={<Contacts />}></Route>
         <Route path="/update/:id" element={<Update />}></Route>
